@@ -21,7 +21,8 @@ jobs:
         run: pip install --target package boto3
 
       - name: Package Lambda Function
-        run: | 
+        run: |
+          cp lambda_function.py package/
           cd package
           zip -r ../lambda_function.zip .
 
